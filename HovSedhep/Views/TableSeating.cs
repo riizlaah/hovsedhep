@@ -13,10 +13,11 @@ namespace HovSedhep.Views
 {
     public partial class TableSeating : UserControl
     {
-        HovSedhepDBC db = new HovSedhepDBC();
+        HovSedhepDBC db;
         List<Button> tableButtons = new List<Button>();
-        public TableSeating()
+        public TableSeating(HovSedhepDBC dbc)
         {
+            db = dbc;
             InitializeComponent();
             tableButtons = new List<Button>() { a1, a2, a3, a4, b1, b2, c1, c2};
             RefreshTable();

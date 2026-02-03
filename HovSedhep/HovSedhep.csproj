@@ -81,6 +81,12 @@
     <Compile Include="Views\ManageTable.Designer.cs">
       <DependentUpon>ManageTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TableSeating.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Views\ManageTable.resx">
       <DependentUpon>ManageTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TableSeating.resx">
       <DependentUpon>TableSeating.cs</DependentUpon>
