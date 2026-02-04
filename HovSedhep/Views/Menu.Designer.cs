@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.filter = new System.Windows.Forms.ComboBox();
             this.search = new System.Windows.Forms.TextBox();
+            this.filter = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuTable = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -55,26 +55,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
-            // groupBox2
+            // search
             // 
-            this.groupBox2.Controls.Add(this.menuTable);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 153);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(708, 317);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Menu";
+            this.search.Location = new System.Drawing.Point(101, 81);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(209, 30);
+            this.search.TabIndex = 3;
+            this.search.TextChanged += new System.EventHandler(this.onTextChanged);
             // 
-            // label1
+            // filter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Category";
+            this.filter.FormattingEnabled = true;
+            this.filter.Location = new System.Drawing.Point(101, 30);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(209, 33);
+            this.filter.TabIndex = 2;
+            this.filter.SelectedValueChanged += new System.EventHandler(this.filter_SelectedValueChanged);
             // 
             // label2
             // 
@@ -86,34 +82,41 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
-            // filter
+            // label1
             // 
-            this.filter.FormattingEnabled = true;
-            this.filter.Location = new System.Drawing.Point(101, 30);
-            this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(209, 33);
-            this.filter.TabIndex = 2;
-            this.filter.SelectedValueChanged += new System.EventHandler(this.filter_SelectedValueChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Category";
             // 
-            // search
+            // groupBox2
             // 
-            this.search.Location = new System.Drawing.Point(101, 81);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(209, 30);
-            this.search.TabIndex = 3;
-            this.search.TextChanged += new System.EventHandler(this.onTextChanged);
+            this.groupBox2.Controls.Add(this.menuTable);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 153);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(708, 317);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Menu";
             // 
             // menuTable
             // 
             this.menuTable.AllowUserToAddRows = false;
             this.menuTable.AllowUserToDeleteRows = false;
+            this.menuTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.menuTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.menuTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuTable.Location = new System.Drawing.Point(3, 18);
+            this.menuTable.MultiSelect = false;
             this.menuTable.Name = "menuTable";
             this.menuTable.ReadOnly = true;
             this.menuTable.RowHeadersWidth = 51;
             this.menuTable.RowTemplate.Height = 24;
+            this.menuTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.menuTable.Size = new System.Drawing.Size(702, 296);
             this.menuTable.TabIndex = 0;
             // 

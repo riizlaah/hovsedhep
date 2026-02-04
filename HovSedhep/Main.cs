@@ -17,10 +17,12 @@ namespace HovSedhep
         HovSedhepDBC DBC;
         TableSeating tableSeating;
         Views.Menu menu;
+        History history;
         public Main()
         {
             DBC = new HovSedhepDBC();
             menu = new Views.Menu(DBC);
+            history = new History(DBC);
             tableSeating = new TableSeating(DBC);
             InitializeComponent();
             setControl(tableSeating);
@@ -54,7 +56,7 @@ namespace HovSedhep
 
         private void onTransaction(object sender, EventArgs e)
         {
-
+            setControl(history);
         }
     }
 }

@@ -65,7 +65,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 99);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Transactions";
+            this.button3.Text = "History";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.onTransaction);
             // 

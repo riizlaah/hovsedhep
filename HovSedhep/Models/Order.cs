@@ -21,11 +21,14 @@ namespace HovSedhep.Models
         public int EmployeeID { get; set; }
 
         public DateTime? OrderTime { get; set; }
+        public string OrderTimeString => OrderTime?.ToString("T") ?? "-";
 
         public virtual Employee Employee { get; set; }
+        public string EmployeeName => Employee?.Name ?? "-";
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public int TotalItems => OrderDetails?.Count ?? 0;
 
         public virtual Transaction Transaction { get; set; }
     }

@@ -60,6 +60,8 @@ namespace HovSedhep.Views
             {
                 menuTable.DataSource = query.Where(m => m.Name.Contains(src) || m.Description.Contains(src)).ToList();
             }
+            menuTable.AutoResizeColumns();
+            menuTable.Refresh();
         }
 
         private void filter_SelectedValueChanged(object sender, EventArgs e)
